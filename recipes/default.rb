@@ -36,7 +36,7 @@ template "#{node['php']['ext_conf_dir']}/xdebug.ini" do
   mode 0644
   # TODO: Move logic from template to recipe later?
   # variable( :extension_dir => node['php']['php_extension_dir'] )
-  notifies :restart, resources("service[apache2]"), :delayed
+  # notifies :restart, resources("service[apache2]"), :delayed
 end
 
 file node['xdebug']['remote_log'] do
